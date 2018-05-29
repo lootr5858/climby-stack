@@ -20,7 +20,7 @@ class Camera(BaseCamera):
             # read current frame
             _, img = camera.read()
 
-            img = cv2.resize(img, (320,240))
+            img = cv2.resize(img, (320, 240))
 
             # encode as a jpeg image and return it
             yield cv2.imencode('.jpg', img, Camera.encode_param)[1].tobytes()
